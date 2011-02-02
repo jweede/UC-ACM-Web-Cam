@@ -23,21 +23,6 @@ $(document).ready(function(){
     
     //set the alarm for the trigger event
     (function alarmFunc(){
-        /*
-        var td = new Date();
-        var hour = td.getHours();
-        var minute = td.getMinutes();
-        
-        //alarm condition: Every hour
-        hour = hour + ( minute < 15 ? 0 : 1);
-        
-        td.setHours(hour);
-        td.setMinutes(15);
-        td.setSeconds(0);
-        td.setMilliseconds(0);
-        
-        var timeTilAlarm = function(){ return ( td.getTime() - (new Date()) ) };
-        */
         var timeTilAlarm = 15*60*1000;
         //set alarm event
         window.setTimeout(function(){
