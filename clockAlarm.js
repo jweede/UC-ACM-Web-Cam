@@ -18,7 +18,7 @@ $(document).ready(function(){
         ct.setMinutes( ct.getMinutes >= 59 ? 0 : ct.getMinutes + 1);
         ct.setSeconds( ct.getSeconds >= 59 ? 0 : ct.getSeconds + 1);
         ct.setMilliseconds(0);
-        window.setTimeout( clockUpdate , (ct.getTime() - new Date() ) );
+        window.setTimeout( clockUpdate , (ct.getTime() - (new Date())) );
     })();
     
     //set the alarm for the trigger event
@@ -38,14 +38,14 @@ $(document).ready(function(){
         
         var timeTilAlarm = function(){ return ( td.getTime() - (new Date()) ) };
         */
-        var timeTilAlarm = 15 * 60 * 1000
+        var timeTilAlarm = 15*60*1000;
         //set alarm event
         window.setTimeout(function(){
             //alarm event
             camRefresh();
             //set next alarm
             alarmFunc();            
-        }, timeTilAlarm() );
+        }, timeTilAlarm );
         
     })();
     
